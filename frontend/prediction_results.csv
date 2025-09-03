@@ -1,0 +1,67 @@
+time,status,message
+2025-07-22 16:39:47,成功,picture upload success
+2025-07-22 16:39:47,成功,predicted_age:178.72
+2025-07-22 16:40:40,失败,"Unsupported image format, currently supported: jpg,png,tif"
+2025-07-22 16:40:54,成功,picture upload success
+2025-07-22 16:40:54,成功,predicted_age:178.72
+2025-07-22 16:50:17,成功,picture upload success
+2025-07-22 16:50:20,成功,178.72
+2025-07-22 16:51:17,成功,picture upload success
+2025-07-22 16:51:19,成功,178.72
+2025-07-22 17:01:05,成功,picture upload success
+2025-07-22 17:01:07,成功,178.72
+2025-07-22 17:01:07,失败,未知错误: 'pdfpath'
+2025-07-22 17:01:19,成功,picture upload success
+2025-07-22 17:01:21,失败,未知错误: 'NoneType' object is not subscriptable
+2025-07-22 17:02:07,成功,picture upload success
+2025-07-22 17:02:10,成功,178.72
+2025-07-22 17:03:33,失败,"请求异常: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /upload (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x782c83085c70>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+2025-07-22 17:03:37,成功,picture upload success
+2025-07-22 17:03:39,成功,178.72
+2025-07-22 17:06:00,成功,picture upload success
+2025-07-22 17:06:02,成功,178.72
+2025-07-22 17:06:41,成功,picture upload success
+2025-07-22 17:06:44,成功,178.72
+2025-07-22 17:06:59,成功,picture upload success
+2025-07-22 17:07:01,成功,178.72
+2025-07-22 17:07:58,成功,picture upload success
+2025-07-22 17:08:01,成功,178.72
+2025-07-22 17:08:25,成功,picture upload success
+2025-07-22 17:08:27,成功,178.72
+2025-07-22 17:09:01,成功,picture upload success
+2025-07-22 17:09:03,成功,178.72
+2025-07-22 17:09:32,成功,picture upload success
+2025-07-22 17:09:34,成功,178.72
+2025-07-22 17:10:46,成功,picture upload success
+2025-07-22 17:10:47,成功,81.56
+2025-07-22 17:11:44,成功,picture upload success
+2025-07-22 17:11:46,成功,81.56
+2025-07-22 20:43:43,Success,picture upload success
+2025-07-22 20:43:45,Success,81.56
+2025-07-22 20:44:21,Success,picture upload success
+2025-07-22 20:44:23,Success,81.56
+2025-07-22 20:45:21,Success,picture upload success
+2025-07-22 20:45:23,Success,81.56
+2025-07-23 12:57:03,Failed,"Request exception: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /upload (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1015e9520>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+2025-07-23 13:34:39,Success,picture upload success
+2025-07-23 13:34:39,Failed,Prediction failed: Numpy is not available
+2025-07-23 13:38:19,Success,picture upload success
+2025-07-23 13:38:29,Failed,Prediction timed out (exceeded 10 seconds)
+2025-07-23 13:47:14,Success,picture upload success
+2025-07-23 13:47:45,Success,81.4
+2025-07-24 15:46:12,Failed,Image file does not exist: test/2025_07_23_03_47_44_1785_BoneAgePredictionReport
+2025-07-24 15:46:33,Failed,"Unsupported image format, currently supported: jpg,png,tif,jpeg"
+2025-07-24 15:49:31,Success,picture upload success
+2025-07-24 15:50:05,Success,144.66
+2025-07-24 15:52:12,Success,picture upload success
+2025-07-24 15:52:43,Success,113.39
+2025-07-24 16:02:57,Failed,Image file does not exist: test/1959.jpeg
+2025-07-24 16:03:13,Failed,Image file does not exist: test/1959.jpeg
+2025-07-24 16:03:21,Success,picture upload success
+2025-07-24 16:03:59,Success,144.66
+2025-07-24 16:07:42,Success,picture upload success
+2025-07-24 16:08:18,Success,144.66
+2025-07-24 16:08:46,Failed,Image file does not exist: test/errortest.pdf
+2025-07-24 16:08:58,Failed,"Unsupported image format, currently supported: jpg,png,tif,jpeg"
+2025-07-24 17:13:22,Success,picture upload success
+2025-07-24 17:13:59,Success,144.66

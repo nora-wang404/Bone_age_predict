@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bone Age Prediction</title>
+</head>
+<body>
+  <h2>🦴 Bone Age Predictor Web</h2>
+  <input type="file" id="imageInput"><br><br>
+
+  <label><input type="radio" name="gender" value="1" checked> Male</label>
+  <label><input type="radio" name="gender" value="0"> Female</label><br><br>
+
+  <button onclick="predict()">Upload and Predict</button>
+  <p id="status"></p>
+
+  <script>
+    async function predict() {
+      const imageInput = document.getElementById('imageInput');
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const status = document.getElementById('status');
+
+      if (imageInput.files.length === 0) {
+        alert("Please select an image.");
+        return;
+      }
+
+      const imageFile = imageInput.files[0];
+      const filename = imageFile.name;
+      const formData = new FormData();
+      formData.append("image", imageFile);
+      formData.append("filename", filename);
+
+      status.innerText = "📤 Uploading image...";
+
+      try {
+        // upload picture
+        const uploadRes = await fetch("http://localhost:5001/upload", {
+          method: "POST",
+          body: formData
+        });
+        const uploadData = await uploadRes.json();
+        if (!uploadData.success) {
+          status.innerText = "❌ Upload failed: " + uploadData.info;
+          return;
+        }
+
+        status.innerText = "⏳ Predicting...";
+
+        // predict
+        const predictForm = new FormData();
+        predictForm.append("filename", filename);
+        predictForm.append("male", gender);
+
+        const predictRes = await fetch("http://localhost:5001/predict", {
+          method: "POST",
+          body: predictForm
+        });
+        const predictData = await predictRes.json();
+        if (!predictData.success) {
+          status.innerText = "❌ Prediction failed: " + predictData.info;
+          return;
+        }
+
+        const pdf = predictData.pdfpath;
+        if (pdf) {
+          const downloadUrl = `http://localhost:5001/download/pdf?filename=${encodeURIComponent(pdf)}`;
+          status.innerHTML = `✅ Prediction done! <a href="${downloadUrl}" target="_blank">Download PDF Report</a>`;
+        } else {
+          status.innerText = "✅ Prediction done, but no report was generated.";
+        }
+      } catch (e) {
+        status.innerText = "❌ Error: " + e.message;
+      }
+    }
+  </script>
+</body>
+</html>

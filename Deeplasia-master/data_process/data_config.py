@@ -1,0 +1,1 @@
+rootdata = "/media/dzy/deep1/train_data2/guling"
